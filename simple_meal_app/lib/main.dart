@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   Map<String, bool> _filters = {
     'gluten': false,
     'lactose': false,
-    'vegeterian': false,
+    'vegetarian': false,
     'vegan': false,
   };
 
@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
         if (_filters['lactose'] && !meal.isLactoseFree) {
           return false;
         }
-        if (_filters['vagetarian'] && !meal.isVegetarian) {
+        if (_filters['vegetarian'] && !meal.isVegetarian) {
           return false;
         }
         if (_filters['vegan'] && !meal.isVegan) {

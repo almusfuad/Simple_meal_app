@@ -16,7 +16,7 @@ class FiltersScreen extends StatefulWidget {
 
 class _FiltersScreenState extends State<FiltersScreen> {
   bool _glutenFree = false;
-  bool _vegeterian = false;
+  bool _vegetarian = false;
   bool _vegan = false;
   bool _lactoseFree = false;
 
@@ -24,7 +24,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
   initState() {
     _glutenFree = widget.currentFilters['gluten'];
     _lactoseFree = widget.currentFilters['lactose'];
-    _vegeterian = widget.currentFilters['vegeterian'];
+    _vegetarian = widget.currentFilters['vegetarian'];
     _vegan = widget.currentFilters['vegan'];
     super.initState();
   }
@@ -58,7 +58,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 'gluten': _glutenFree,
                 'lactose': _lactoseFree,
                 'vegan': _vegan,
-                'vegeterian': _vegeterian,
+                'vegetarian': _vegetarian,
               };
               widget.saveFilters(selectedFilters);
             },
@@ -106,11 +106,11 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 _buildSwitchListTile(
                   'Vegetarian',
                   'Only include vegetarian meals.',
-                  _vegeterian,
+                  _vegetarian,
                   (newValue) {
                     setState(
                       () {
-                        _vegeterian = newValue;
+                        _vegetarian = newValue;
                       },
                     );
                   },
